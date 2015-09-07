@@ -1,0 +1,294 @@
+// Responsive menu
+
+/*Responsive Styles*/
+/*Style 'show menu' label button and hide it by default*/
+
+.mobile-menu-top{
+  display: none!important;
+  background-color: $brand-primary;
+  width: 100%;
+
+
+  .brandname{
+    padding: 10px 10px 10px 15px;
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 20px;
+    a{
+      color: #fff;
+      font-weight: normal;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .hamburger { 
+  //  height: 40px;
+   
+    font-size: 2em;
+    text-decoration: none;
+    padding:5px 15px 5px 5px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px;
+    float: right;
+
+  }
+}
+
+  /*Hide checkbox*/
+  input[type=checkbox]{
+      display: none;
+  }
+
+  /*Show menu when invisible checkbox is checked*/
+  input[type=checkbox]:checked ~ #main-menu{
+      display: inline-block!important;
+  }
+
+  .mobile-search-chart{
+    display: none;
+  }
+
+
+
+@media screen and (max-width: $screen-sm) { 
+
+.form{
+  .form-group{
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width: $screen-xs) { 
+      width: 100%;
+    }
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.mobile-search-chart{
+  display: block;
+}
+  
+
+  header{
+    display: none;
+    margin-top:0px !important;
+  }
+
+  main{
+    margin-top: 25px;
+  }
+
+   
+  .mobile-menu-top {
+    display:block !important;
+  }
+
+  #main-menu {
+    margin-top: 0px!important;
+    display: none;
+
+    font-size: 12px;
+    text-decoration: none;
+    padding:0px;
+    background-color: #f9f9f9; //$gray-lighter;
+
+
+    > ul{
+      border: none!important;
+/*
+Activate this to make supermenu to dropdown ... 
+      .superdropdown > li >ul {
+        ...
+ 
+      }
+*/
+      h3{
+        font-size: 12px;
+      }
+      .col {float: none!important;
+        img { display:none; }
+      }
+      >li{
+          border-bottom: none !important;
+          display: block;
+          clear: both;
+          width: 100%;
+          margin: 0px !important;
+
+          ul{
+            display: block;
+            position: relative !important;           
+            li{
+              
+              display: block;
+              width:100%;
+                 ul{
+                  display: none;
+                  width: 100%;
+                  left: 0% !important;
+
+                }
+            }
+          }
+
+      }
+    }
+  }
+}
+
+
+// end
+/* menu */
+
+
+
+#main-menu {
+  margin-top: 15px;
+  z-index: 700;
+  position: relative;
+
+> ul{
+
+  .superdropdown > li >ul {
+    display: block;
+  }
+
+  .hiddenmenu{
+    display: none;
+  }
+
+  //  multicol specialities
+    .col{
+      float:left;
+    ul{
+      padding: 0px;
+      list-style: none;
+      position: relative;
+      left: 0px;
+    }
+    img{
+      padding: 20px;
+    }
+  }
+
+  h3{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 0px;
+    margin: 0px;
+    text-align: center;
+  }
+// Standard settings   
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: 4px solid #000;
+  padding: 0px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400!important;
+
+  font-size: 12px;
+
+
+  .right{
+    float: right;
+  }
+
+// First level 
+
+  >li{
+
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 4px solid #000;
+    margin: 0px 0px -4px 0;
+  //  position: relative;
+
+
+
+   a {
+
+      padding: 0 15px;
+      display:block;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-weight: 400;
+      color: #000;
+      text-decoration: none;
+    }
+
+    &:hover{
+      border-color: #65d3c8;
+      background-color: #384759;
+
+      &.red{
+        border-color: #ff0000; //red
+      }
+      
+      > a{
+        color: #FFF;
+      }
+      //show first submenu
+      > ul.hiddenmenu{
+        display: block;
+      }
+    }
+        
+
+// here goes the dropdown layer navigation
+   >ul{
+      display: inline-block;
+      margin: 4px 0 0 0;
+      padding: 0px;
+      position: absolute;
+      background-color: #f2f3f5;
+      list-style: none;
+      min-width: 80px;
+
+      >li{
+        list-style: none;
+        position: relative;
+
+
+        &:hover {
+          background-color: darken(#f2f3f5, 20%);
+          h3{
+            background-color:#f2f3f5;
+          }
+          //show first submenu
+          > ul.hiddenmenu{
+            display: block;
+          }
+        }
+
+        // here is the flyout navigation
+        >ul{
+          position: absolute;
+          background-color: #f2f3f5;
+          left: 100%;
+          top:0;
+          list-style: none; 
+          padding: 0px;
+
+          >li{
+            &:hover{
+              background-color: darken(#f2f3f5, 20%);
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+}
+    

@@ -1,0 +1,24 @@
+// Mixin 
+
+$socials: twitter facebook linkedin;
+
+@mixin social-sprite($offset) {
+  $offset: $offset - 1;
+  &{
+    background-position: 37px*-$offset top;
+  }
+  &:hover{
+    background-position: 37px*-$offset bottom;
+  }
+}
+
+// End Mixin
+
+
+@for $i from 1 through length($socials) {
+  $social: nth($socials, $i);
+  .social-icon-#{$social} {
+    @include social-sprite($i);
+  }
+}
+

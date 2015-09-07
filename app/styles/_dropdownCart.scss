@@ -1,0 +1,21 @@
+// Dropdown cart
+
+.dropdown-cart{
+	padding: 7px;
+	.media{
+		margin: 0 0 7px 0;	
+		>:nth-child(2){
+			min-width: 160px;
+			padding-right: 5px;
+		}
+	}
+	.media-body {
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+    button.close{
+    	padding: 5px;
+    	font-size: 20px;
+    	color: $text-color;
+    }
+}

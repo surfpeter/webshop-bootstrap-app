@@ -1,0 +1,96 @@
+// make submeu avaliable in bootstrap 3
+
+dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0px;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 ;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+}
+.dropdown-submenu>a:after {
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:#cccccc;
+    margin-top:5px;
+    margin-right:-10px;
+}
+.dropdown-submenu:hover>a:after {
+    border-left-color:#ffffff;
+}
+.dropdown-submenu.pull-left {
+    float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+
+// submenu end
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+
+
+// makes it work without jQuery
+
+
+/*
+ * Open dropdowns on hover instead of click.
+ */
+
+@media (min-width: 768px) {
+  .dropdown:hover {
+    background: #e7e7e7;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block !important;
+  }
+}
+
+/*
+ * The following is needed since the dropdowns are <div> elements instead
+ * of <a> elements
+ */
+.nav > li > div {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  cursor: default;
+}
+.navbar-nav > li > div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+.navbar-default .navbar-nav > li > div {
+  color: rgb(119, 119, 119);
+}
+// interfers whith default
+.navbar-collapse.collapse {
+  display: none;
+}
+
+
+
+.dropdown-open {
+  background: #e7e7e7;
+}

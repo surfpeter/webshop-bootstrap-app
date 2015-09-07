@@ -1,0 +1,27 @@
+.nav-tabs {	
+	margin-top: 20px;
+	border-width: 4px;
+	text-transform: uppercase;
+	> li > a {
+	background-color: $gray-lighter;
+	border-bottom-color: $nav-link-hover-bg;
+	color: $nav-link-hover-bg;
+	padding: 6px 10px;
+	&:hover{
+		color: #fff;
+	}
+	}
+}
+.tab-content{
+	padding: 10px 0 40px 0;
+ 	.col-3 {
+	 	@media screen and (min-width: $screen-sm) { 
+	    -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
+	    -moz-columns: 100px 3; /* Firefox */
+	    columns: 100px 3;
+		}
+
+
+
+	}
+}

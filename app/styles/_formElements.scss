@@ -1,0 +1,75 @@
+.add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+
+
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon {
+	.form-control {
+	    left: 3px;
+	    border-radius: 6px!important;
+	}
+	.glyphicon {
+		position: absolute;
+		padding: 10px;
+		pointer-events: none;
+		z-index: 999;
+		font-size: 16px;
+	   	line-height: 16px;
+	   	padding: 8px 8px 8px 12px;
+
+	}
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.input-group.glyph{
+	.glyphicon, .fa{
+		font-size: 16px;
+	    position: absolute;
+	    left: 9px;
+	    top: 6px;
+	    z-index: 999;
+	    display: inline-block;
+	    color: $text-color;
+	}	
+	input{
+		padding-left: 30px;
+		// This might not work <= IE9
+		border-bottom-left-radius: 6px !important;
+    	border-top-left-radius: 6px !important;
+ 		border-bottom-right-radius: 0px !important;
+    	border-top-right-radius: 0px !important;
+	}
+}
+#emailSignup{
+	.fa{
+		margin-right: 5px;
+	}
+	.form-group{
+		margin-bottom: 8px; 
+	}
+}
